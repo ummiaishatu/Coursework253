@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://cs253/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://cs253/">
+
+<xs:element name="addFerryRoute" type="tns:addFerryRoute"/>
+
+<xs:element name="addFerryRouteResponse" type="tns:addFerryRouteResponse"/>
+
+<xs:element name="addPort" type="tns:addPort"/>
+
+<xs:element name="addPortResponse" type="tns:addPortResponse"/>
+
+<xs:element name="deleteFerryRoute" type="tns:deleteFerryRoute"/>
+
+<xs:element name="deleteFerryRouteResponse" type="tns:deleteFerryRouteResponse"/>
+
+<xs:element name="deletePort" type="tns:deletePort"/>
+
+<xs:element name="deletePortResponse" type="tns:deletePortResponse"/>
+
+<xs:element name="getCompany" type="tns:getCompany"/>
+
+<xs:element name="getCompanyResponse" type="tns:getCompanyResponse"/>
+
+<xs:element name="getFerryList" type="tns:getFerryList"/>
+
+<xs:element name="getFerryListResponse" type="tns:getFerryListResponse"/>
+
+<xs:element name="getID" type="tns:getID"/>
+
+<xs:element name="getIDResponse" type="tns:getIDResponse"/>
+
+<xs:element name="getPort" type="tns:getPort"/>
+
+<xs:element name="getPortList" type="tns:getPortList"/>
+
+<xs:element name="getPortListResponse" type="tns:getPortListResponse"/>
+
+<xs:element name="getPortResponse" type="tns:getPortResponse"/>
+
+<xs:complexType name="deleteFerryRoute">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteFerryRouteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPort">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPortResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addFerryRoute">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+<xs:element name="arg3" type="xs:string" minOccurs="0"/>
+<xs:element name="arg4" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addFerryRouteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCompany">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCompanyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPortList">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getPortListResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletePort">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletePortResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getFerryList">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getFerryListResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ferries" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ferries">
+<xs:sequence>
+<xs:element name="endPort" type="xs:string" minOccurs="0"/>
+<xs:element name="ferryCompany" type="xs:string" minOccurs="0"/>
+<xs:element name="ID" type="xs:string" minOccurs="0"/>
+<xs:element name="startPort" type="xs:string" minOccurs="0"/>
+<xs:element name="time" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getID">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getIDResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addPort">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addPortResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
